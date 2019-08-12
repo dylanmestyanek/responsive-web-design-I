@@ -65,6 +65,7 @@ h1, h2, h3, h4, h5 {
 
 /* Your code starts here! */
 
+/* ========== General Page Styling ========== */
 * {
 	transition: all .3s;
 }
@@ -122,6 +123,7 @@ address h2 {
 	font-size: 22px;
 }
 
+/* ========== Slogan Header Section Styling ========== */
 .navbar {
     display: flex;
     justify-content: space-evenly;
@@ -233,6 +235,7 @@ address h2 {
 	width: 100%;
 }
 
+/* ========== Top Content Section Styling ========== */
 .informationContainers {
 	text-align: left;
 	font-family: 'Red Hat Display', sans-serif;
@@ -276,6 +279,7 @@ address h2 {
 	height: 100%;
 }
 
+/* ========== Bottom Content Section Styling ========== */
 .bottomContent {
 	display: flex;
 	justify-content: space-evenly;
@@ -295,6 +299,7 @@ address h2 {
     box-shadow: 8px 8px 10px 3px rgba(0, 0, 0, .4);
 }
 
+/* ========== Footer Styling ========== */
 .copyrightFooter {
 	background-color: rgba(15, 160, 250, 1);
 	width: 100%;
@@ -304,7 +309,8 @@ address h2 {
 	margin-top: 40px;
 }
 
-/* ========== Services.html Styling =========== */
+/****************  services.html styling  *************** */
+/* ========== Services Introduction Section Styling ========== */
 .servicesIntroduction {
     display: flex;
     flex-direction: column;
@@ -332,6 +338,7 @@ address h2 {
     box-shadow: 8px 8px 10px 3px rgba(0, 0, 0, .4);
 } 
 
+/* ========== Main Page Conten Section Styling ========== */
 .mainPageContentBoxes {
     width: 100%;
     display: flex;
@@ -366,6 +373,7 @@ address h2 {
     color: black;
 }
 
+/* ========== Bottom Text Container Section Styling ========== */
 .bottomTextContainer {
     width: 100%;
     display: flex;
@@ -409,7 +417,7 @@ address h2 {
     box-shadow: 8px 8px 10px 3px rgba(0, 0, 0, .4);
 }
 
-
+/* ==========  Hover animation for Navigation Links  ========== */
 @keyframes rotateNavButton {
 	0% { transform: translateX(0px); }
 	25% { transform: translateX(6px); } 
@@ -417,6 +425,7 @@ address h2 {
 	100% { transform: translateX(0px); }
 }
 
+/*  */
 @media screen and (max-width: 1100px){
     .navbar {
         flex-wrap: wrap;

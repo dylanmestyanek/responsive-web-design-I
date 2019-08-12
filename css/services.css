@@ -1,0 +1,12 @@
+body {
+	background-color: rgba(224, 114, 87, 0.8);
+}
+
+.navbar {
+	background-color: rgb(214, 79, 79);
+}
+
+.copyrightFooter {
+    background-color: rgb(214, 79, 79);
+    color: rgba(255, 255, 255, .8);
+}
