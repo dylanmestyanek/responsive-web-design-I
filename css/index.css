@@ -266,7 +266,6 @@ address h2 {
 	font-size: 22px;
 }
 
-
 .middleComputerMatrixImg {
 	width: 90%;
 	height: 200px;
@@ -530,6 +529,10 @@ address h2 {
 	}
 
 	/************   Services.html styling   ************/
+	.servicesIntroduction {
+		padding-top: 30px;
+	}
+
 	/* ========== Vertical Main Page Content Boxes Section   ========== */
 	.mainPageContentBoxes {
 		flex-direction: column;
