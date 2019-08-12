@@ -78,7 +78,7 @@ body {
 	background-color: rgba(75, 201, 240, 0.8);
     width: 65%;
     max-width: 1200px;
-    min-width: 600px;
+    min-width: 500px;
 	height: auto;
 	margin: 80px auto 0;
 	padding-top: 30px;
@@ -137,7 +137,7 @@ address h2 {
 	top: 0px;
     width: 65%;
     max-width: 1200px;
-    min-width: 600px;
+    min-width: 500px;
 	height: 80px;
     text-align: center;
     padding: 0 1%;
@@ -154,7 +154,7 @@ address h2 {
 .navbar a{
 	text-decoration: none;
 	color: black;
-	font-size: 20px;
+	font-size: 18px;
     font-family: 'Red Hat Display', sans-serif;
 }
 
@@ -177,8 +177,7 @@ address h2 {
 }
 
 .logoContainer {
-    width: 40%;
-    max-width: 130px;
+    width: 130px;
 }
 
 .logoContainer img {
@@ -242,16 +241,6 @@ address h2 {
 }
 
 /* ========== Top Content Section Styling ========== */
-.informationContainers {
-	text-align: left;
-	font-family: 'Red Hat Display', sans-serif;
-	padding: 0 40px;
-}
-
-.informationContainers h2 {
-	font-size: 22px;
-}
-
 .topContent {
 	display: flex;
 	justify-content: space-evenly;
@@ -262,6 +251,8 @@ address h2 {
 }
 
 .topContent div {
+	text-align: left;
+	font-family: 'Red Hat Display', sans-serif;
 	width: 43.5%;
     margin: 20px 0;
     padding: 20px;
@@ -270,6 +261,11 @@ address h2 {
     background-color: rgba(255, 255, 255, .7);
     box-shadow: 8px 8px 10px 3px rgba(0, 0, 0, .4);
 }
+
+.informationContainers h2 {
+	font-size: 22px;
+}
+
 
 .middleComputerMatrixImg {
 	width: 90%;
@@ -434,6 +430,23 @@ address h2 {
 	100% { transform: translateX(0px); }
 }
 
+/* ==========  Services.html Vertical Stacking Bottom Content   ========== */
+@media screen and (max-width: 1200px){
+	.bottomTextContainer {
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+
+	.servicesInfoImgContainer {
+		width: 75%;
+	}
+
+	.aboutServicesText {
+		width: 75%;
+		margin-top: 30px;
+	}
+}
+
 /* ==========  Tablet View Styling  ========== */
 @media screen and (max-width: 800px){
 
@@ -449,20 +462,80 @@ address h2 {
 	.computerMatrixImg {
 		display: none;
 	}
+}
 
-	/*************  Services.html styling  *************/
-	/* ==========  Bottom Text Content Section Styling  ========== */
-	.bottomTextContainer {
-		flex-direction: column-reverse;
+/* ==========  Smartphone View Styling  ========== */
+@media screen and (max-width: 500px){
+	/* ==========  Vertical Navigation Bar  ========== */
+	body {
+		margin-top: 0;
+		padding-top: 0;
+	}
+
+	.navbar {
+		height: 375px;
+		top: 0;
+		position: relative;
+		padding: 0;
+	}
+
+	.navButtonContainer {
+		margin-top: -20px;
 		align-items: center;
+		flex-direction: column;
 	}
 
-	.servicesInfoImgContainer {
-		width: 75%;
+	.navButtons {
+		width: 60%;
+		border-bottom: 1px solid black;
+		padding: 10px 0;
 	}
 
-	.aboutServicesText {
-		width: 75%;
-		margin-top: 30px;
+	.logoContainer {
+		width: 40%;
+		box-sizing: content-box;
+		padding: 0 65px 15px;
+		border-bottom: 1px solid black;
+	}
+
+	.sloganHeader {
+		padding-top: 60px;
+	}
+
+	/* ==========  Vertical Top Content Section  ========== */
+	.topContent {
+		flex-direction: column;
+	}
+
+	.topContent div {
+		width: 80%;
+	}
+
+	.middleComputerMatrixImg {
+		width: 80%;
+	}
+
+	.middleComputerMatrixImg img {
+		border-radius: 5px;
+	}
+
+	/* ==========  Vertical Bottom Content Section  ========= */
+	.bottomContent {
+		flex-direction: column;
+	}
+
+	.bottomContent div {
+		width: 85%;
+		text-align: left;
+	}
+
+	/************   Services.html styling   ************/
+	/* ========== Vertical Main Page Content Boxes Section   ========== */
+	.mainPageContentBoxes {
+		flex-direction: column;
+	}
+
+	.mainPageContentText {
+		width: 85%;
 	}
 }
