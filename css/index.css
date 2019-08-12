@@ -78,7 +78,7 @@ body {
 	background-color: rgba(75, 201, 240, 0.8);
     width: 65%;
     max-width: 1200px;
-    min-width: 430px;
+    min-width: 600px;
 	height: auto;
 	margin: 80px auto 0;
 	padding-top: 30px;
@@ -115,7 +115,12 @@ hr {
 	border: none;
 }
 
+.top-hr {
+	height: 1px;
+}
+
 .bottom-hr {
+	height: 1px;
 	margin-top: 40px;
 }
 
@@ -125,20 +130,25 @@ address h2 {
 
 /* ========== Slogan Header Section Styling ========== */
 .navbar {
-    display: flex;
+	display: flex;
     justify-content: space-evenly;
     align-items: center;
 	position: fixed;
 	top: 0px;
     width: 65%;
     max-width: 1200px;
-    min-width: 430px;
+    min-width: 600px;
 	height: 80px;
     text-align: center;
     padding: 0 1%;
 	border-bottom: 1px solid black;
 	background-color: rgba(15, 160, 250, 1);
 	z-index: 2;
+}
+
+.navButtonContainer {
+	display: flex;
+	width: 100%;
 }
 
 .navbar a{
@@ -164,10 +174,6 @@ address h2 {
 .navButtons:hover a {
 	color: rgba(255, 255, 255, .8);
 	text-decoration: underline;
-}
-
-#servicesLink {
-    color: rgba(255, 255, 255, .8);
 }
 
 .logoContainer {
@@ -198,7 +204,7 @@ address h2 {
 	justify-content: center;
 	align-items: center;
 	width: 40%;
-	padding: 60px 0;
+	padding: 10px 0;
 	text-align: center;
 	font-size: 60px;
 }
@@ -345,7 +351,6 @@ address h2 {
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-    padding: 20px 0;
 }
 
 .mainPageContentText {
@@ -356,6 +361,10 @@ address h2 {
     border-radius: 5px;
     background-color: rgba(255, 255, 255, .7);
     box-shadow: 8px 8px 10px 3px rgba(0, 0, 0, .4);
+}
+
+.mainPageContentBoxes:last-child{
+	padding-bottom: 100px;
 }
 
 .mainPageContentText button {
@@ -425,52 +434,35 @@ address h2 {
 	100% { transform: translateX(0px); }
 }
 
-/*  */
-@media screen and (max-width: 1100px){
-    .navbar {
-        flex-wrap: wrap;
-    }
+/* ==========  Tablet View Styling  ========== */
+@media screen and (max-width: 800px){
 
-	.bottomContent {
-		flex-direction: column;
-		width: 100%;
-	}
-   
-	.bottomContent div {
-		width: 88%;
+	/* =========  Shifts Logo above Nav Bar  ========= */
+	nav {
+		flex-direction: column-reverse;
 	}
 
-	.sloganHeader {
-		margin: 30px 0 30px;
-		flex-direction: column;
+	.logoContainer {
+		max-width: 160px;
 	}
-
-	.slogan {
-		justify-content: center;
-		width: 50%;
-		z-index: 1;
-	}
-
-	.slogan span {
-		margin-bottom: -50px;
-		font-family: 'Permanent Marker', cursive;
-		background-color: rgba(255, 255, 255, .9);
-		line-height: 1;
-		font-size: 40px;
-		padding: 5px;
-		border-radius: 5px;
-	}
-
-	.slogan button {
-		margin-top: 70px;
-		background-color: rgba(15, 160, 250, 1);
-	}
-
+	
 	.computerMatrixImg {
-		position: absolute;
-		width: 50%;
-		max-width: 400px;
-		min-width: 400px;
-		opacity: .5;
+		display: none;
+	}
+
+	/*************  Services.html styling  *************/
+	/* ==========  Bottom Text Content Section Styling  ========== */
+	.bottomTextContainer {
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+
+	.servicesInfoImgContainer {
+		width: 75%;
+	}
+
+	.aboutServicesText {
+		width: 75%;
+		margin-top: 30px;
 	}
 }
