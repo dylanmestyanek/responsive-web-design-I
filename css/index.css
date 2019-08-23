@@ -1,3 +1,544 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 
+/* Set every element's box-sizing to border-box */
+* {
+	
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Your code starts here! */
+
+/* ========== General Page Styling ========== */
+* {
+	transition: all .3s;
+}
+
+html {
+	background-image: url(https://media.istockphoto.com/photos/white-crumpled-lines-paper-school-background-picture-id948019132?k=6&m=948019132&s=170667a&w=0&h=bzqu_3WXI2dXu-OLpIlhoWxq3XVCyXjCm8jgNxDF65U=);
+}
+
+body {
+	background-color: rgba(75, 201, 240, 0.8);
+    width: 65%;
+    max-width: 1200px;
+    min-width: 500px;
+	height: auto;
+	margin: 80px auto 0;
+	padding-top: 30px;
+}
+
+h2 {
+	font-weight: bold;
+}
+
+address {
+	width: 30%;
+	min-width: 300px;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 30px;
+	padding: 20px;
+	border-radius: 5px;
+	line-height: 1.6;
+	font-size: 18px;
+	background-color: rgba(15, 160, 250, 1);
+	color: white;
+	box-shadow: 8px 8px 10px 3px rgba(0, 0, 0, .4);
+
+}
+
+address span {
+	font-style: italic;
+}
+
+hr {
+	width: 90%;
+	height: 1px;
+	background-color: black;
+	border: none;
+}
+
+.top-hr {
+	height: 1px;
+}
+
+.bottom-hr {
+	height: 1px;
+	margin-top: 40px;
+}
+
+address h2 {
+	font-size: 22px;
+}
+
+/* ========== Slogan Header Section Styling ========== */
+.navbar {
+	display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+	position: fixed;
+	top: 0px;
+    width: 65%;
+    max-width: 1200px;
+    min-width: 500px;
+	height: 80px;
+    text-align: center;
+    padding: 0 1%;
+	border-bottom: 1px solid black;
+	background-color: rgba(15, 160, 250, 1);
+	z-index: 2;
+}
+
+.navButtonContainer {
+	display: flex;
+	width: 100%;
+}
+
+.navbar a{
+	text-decoration: none;
+	color: black;
+	font-size: 18px;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.navButtons {
+	width: 25%;
+	color: black;
+    padding: 0 1%;
+	background: none;
+	border: none;
+}
+
+.navButtons:hover {
+	animation-name: rotateNavButton;
+	animation-duration: .3s;
+}
+
+.navButtons:hover a {
+	color: rgba(255, 255, 255, .8);
+	text-decoration: underline;
+}
+
+.logoContainer {
+    width: 130px;
+}
+
+.logoContainer img {
+    width: 100%;
+}
+
+.logoContainer:hover img {
+	transform: scale(1.1);
+	cursor: pointer;
+}
+
+.sloganHeader {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding-bottom: 30px;
+}
+
+.slogan {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 40%;
+	padding: 10px 0;
+	text-align: center;
+	font-size: 60px;
+}
+
+.slogan span {
+	font-family: 'Permanent Marker', cursive;
+	line-height: .4;
+}
+
+.slogan button {
+	width: 70%;
+	min-width: 150px;
+	border: none;
+	border-radius: 5px;
+	background-color: rgba(15, 160, 250, .8);
+	color: white;
+	font-family: 'Red Hat Display', sans-serif;
+	font-size: 20px;
+	padding: 10px;
+	margin-top: 60px;
+	box-shadow: 8px 8px 10px 3px rgba(0, 0, 0, .4);
+}
+
+.slogan button:hover {
+	background-color: rgba(15, 160, 250, 1);
+	color: rgba(255, 255, 255, .8);
+}
+
+.computerMatrixImg {
+	width: 40%;
+}
+
+.computerMatrixImg img{
+	width: 100%;
+}
+
+/* ========== Top Content Section Styling ========== */
+.topContent {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	padding-top: 20px;
+	width: 100%;
+	text-align: center;
+}
+
+.topContent div {
+	text-align: left;
+	font-family: 'Red Hat Display', sans-serif;
+	width: 43.5%;
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, .7);
+    box-shadow: 8px 8px 10px 3px rgba(0, 0, 0, .4);
+}
+
+.informationContainers h2 {
+	font-size: 22px;
+}
+
+.middleComputerMatrixImg {
+	width: 90%;
+	height: 200px;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 30px;
+	box-shadow: 8px 8px 10px 3px rgba(0, 0, 0, .4);
+}
+
+.middleComputerMatrixImg img {
+	width: 100%;
+	height: 100%;
+}
+
+/* ========== Bottom Content Section Styling ========== */
+.bottomContent {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	width: 100%;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.bottomContent div {
+	width: 26.5%;
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, .7);
+    box-shadow: 8px 8px 10px 3px rgba(0, 0, 0, .4);
+}
+
+/* ========== Footer Styling ========== */
+.copyrightFooter {
+	background-color: rgba(15, 160, 250, 1);
+	width: 100%;
+	height: 28px;
+	line-height: 28px;
+	text-align: center;
+	margin-top: 40px;
+}
+
+/****************  services.html styling  *************** */
+/* ========== Services Introduction Section Styling ========== */
+.servicesIntroduction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.servicesHeaderImg {
+    width: 88%;
+}
+
+.servicesHeaderImg img {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 8px 8px 10px 3px rgba(0, 0, 0, .4);
+}
+
+.servicesHeaderText {
+    width: 88%;
+    margin: 25px 0;
+    padding: 25px 25px 28px;
+	background-color: rgba(214, 79, 79, 1);
+    border-radius: 5px;
+    color: rgba(255, 255, 255, .9);
+    box-shadow: 8px 8px 10px 3px rgba(0, 0, 0, .4);
+} 
+
+/* ========== Main Page Conten Section Styling ========== */
+.mainPageContentBoxes {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.mainPageContentText {
+    width: 43.5%;
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, .7);
+    box-shadow: 8px 8px 10px 3px rgba(0, 0, 0, .4);
+}
+
+.mainPageContentBoxes:last-child{
+	padding-bottom: 100px;
+}
+
+.mainPageContentText button {
+    margin-top: 20px;
+    padding: 8px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    color: rgba(255, 255, 255, .9);
+    background-color: rgb(214, 79, 79);
+}
+
+.mainPageContentText button:hover {
+    background-color: rgba(224, 114, 87, .6);
+    color: black;
+}
+
+/* ========== Bottom Text Container Section Styling ========== */
+.bottomTextContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+.bottomTextContainer ul {
+    margin-top: 20px;
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+.bottomTextContainer ul li {
+    padding: 5px 0;
+}
+
+.aboutServicesText {
+    width: 38%;
+    display: flex;
+    flex-direction: column;
+    border-left: 7px solid red;
+    border-color: rgb(214, 79, 79);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, .6);
+    padding: 20px;
+    box-shadow: 8px 8px 10px 3px rgba(0, 0, 0, .4);
+}
+
+.servicesInfoImgContainer {
+    width: 42%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.servicesInfoImgContainer img {
+    width: 99%;
+    border-radius: 5px;
+    box-shadow: 8px 8px 10px 3px rgba(0, 0, 0, .4);
+}
+
+/* ==========  Hover animation for Navigation Links  ========== */
+@keyframes rotateNavButton {
+	0% { transform: translateX(0px); }
+	25% { transform: translateX(6px); } 
+	50% { transform: translateX(-6px); }
+	100% { transform: translateX(0px); }
+}
+
+/* ==========  Services.html Vertical Stacking Bottom Content   ========== */
+@media screen and (max-width: 1200px){
+	.bottomTextContainer {
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+
+	.servicesInfoImgContainer {
+		width: 75%;
+	}
+
+	.aboutServicesText {
+		width: 75%;
+		margin-top: 30px;
+	}
+}
+
+/* ==========  Tablet View Styling  ========== */
+@media screen and (max-width: 800px){
+
+	/* =========  Shifts Logo above Nav Bar  ========= */
+	nav {
+		flex-direction: column-reverse;
+	}
+
+	.logoContainer {
+		max-width: 160px;
+	}
+	
+	.computerMatrixImg {
+		display: none;
+	}
+}
+
+/* ==========  Smartphone View Styling  ========== */
+@media screen and (max-width: 500px){
+	/* ==========  Vertical Navigation Bar  ========== */
+	body {
+		margin-top: 0;
+		padding-top: 0;
+	}
+
+	.navbar {
+		height: 375px;
+		top: 0;
+		position: relative;
+		padding: 0;
+	}
+
+	.navButtonContainer {
+		margin-top: -20px;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	.navButtons {
+		width: 60%;
+		border-bottom: 1px solid black;
+		padding: 10px 0;
+	}
+
+	.logoContainer {
+		width: 40%;
+		box-sizing: content-box;
+		padding: 0 65px 15px;
+		border-bottom: 1px solid black;
+	}
+
+	.sloganHeader {
+		padding-top: 60px;
+	}
+
+	/* ==========  Vertical Top Content Section  ========== */
+	.topContent {
+		flex-direction: column;
+	}
+
+	.topContent div {
+		width: 80%;
+	}
+
+	.middleComputerMatrixImg {
+		width: 80%;
+	}
+
+	.middleComputerMatrixImg img {
+		border-radius: 5px;
+	}
+
+	/* ==========  Vertical Bottom Content Section  ========= */
+	.bottomContent {
+		flex-direction: column;
+	}
+
+	.bottomContent div {
+		width: 85%;
+		text-align: left;
+	}
+
+	/************   Services.html styling   ************/
+	.servicesIntroduction {
+		padding-top: 30px;
+	}
+
+	/* ========== Vertical Main Page Content Boxes Section   ========== */
+	.mainPageContentBoxes {
+		flex-direction: column;
+	}
+
+	.mainPageContentText {
+		width: 85%;
+	}
+}
